@@ -1,0 +1,32 @@
+## System Workflow
+
+AgroAstra is an AI-powered agricultural advisory system that helps farmers receive instant guidance through messaging platforms such as WhatsApp, Telegram, and SMS.
+
+The system works through the following workflow:
+
+1. Farmer Message Input  
+A farmer sends a query through WhatsApp, Telegram, or SMS. The message can be in the form of text, voice, or an image (for example, a crop disease photo).
+
+2. Webhook Trigger  
+The message is received by the AgroAstra webhook, which triggers the automation workflow built using n8n.
+
+3. Input Processing  
+The system processes the incoming message and identifies the message type. Voice messages are converted into text, images are analyzed, and text messages are normalized so the AI system can understand them clearly.
+
+4. AI Intent Detection  
+The AI agent analyzes the farmer’s query and determines the intent of the request. The query may relate to crop diseases, weather information, market prices, fertilizer recommendations, or government schemes.
+
+5. Data Retrieval  
+Based on the detected intent, the system retrieves relevant information from external sources such as weather APIs, market price databases, agricultural knowledge bases, and government scheme databases.
+
+6. AI Advisory Generation  
+The AI processes the collected information and generates a clear and practical advisory for the farmer. The response includes recommendations, risk warnings, and precautionary steps when necessary.
+
+7. Language Translation  
+The advisory is translated into the farmer’s preferred language to ensure accessibility and ease of understanding.
+
+8. Response Delivery  
+The final response is sent back to the farmer through the same platform used for the query, such as WhatsApp, Telegram, or SMS.
+
+9. Conversation Logging  
+The interaction is stored in the system database to help improve future responses, track farmer queries, and generate insights for better agricultural support.
